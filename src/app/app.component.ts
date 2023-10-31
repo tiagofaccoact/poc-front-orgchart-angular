@@ -9,15 +9,29 @@ import OrgChart from "@balkangraph/orgchart.js";
 export class AppComponent implements OnInit {
   title = 'poc-front-orgchart-angular';
 
-  constructor() {}
+  constructor() {
+    // OrgChart.templates['olivia']['field_0'] = '<text class="field_0" style="font-size: 20px;" fill="#ffffff" x="125" y="30" text-anchor="middle">{val}</text>';
+  }
 
   ngOnInit(): void {
     const tree = document.getElementById('tree');
     if (tree) {
+      OrgChart.SEARCH_PLACEHOLDER = "Buscar pessoa ou cargo"
       var chart = new OrgChart(tree, {
+        enableSearch: true,
+        template: "olivia",
+        enableDragDrop: true,
         nodeBinding: {
+          imgs: "img",
           field_0: "name",
-          img_0: "img"
+          field_1: "title",
+          img_0: "img",
+        },
+        nodeMenu: {
+          details: { text: "Details" },
+          edit: { text: "Edit" },
+          add: { text: "Add" },
+          remove: { text: "Remove" }
         },
       });
 
@@ -28,10 +42,13 @@ export class AppComponent implements OnInit {
         { id: 4, pid: 2, name: "Elliot Patel", title: "Sales", img: "https://cdn.balkan.app/shared/5.jpg" },
         { id: 5, pid: 2, name: "Lynn Hussain", title: "Sales", img: "https://cdn.balkan.app/shared/6.jpg" },
         { id: 6, pid: 3, name: "Tanner May", title: "Developer", img: "https://cdn.balkan.app/shared/7.jpg" },
-        { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://cdn.balkan.app/shared/8.jpg" }
+        { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://cdn.balkan.app/shared/8.jpg" },
+        { id: "hrs", pid: "1", name: "HR Team", tags: ["hrs-group", "group"], description: "Human Resource | London" },
+        { id: 5, stpid: "hrs", name: "Glenn Bell", title: "HR", img: "https://cdn.balkan.app/shared/10.jpg" },
+        { id: 6, stpid: "hrs", name: "Marcel Brooks", title: "HR", img: "https://cdn.balkan.app/shared/11.jpg" },
+        { id: 7, stpid: "hrs", name: "Maxwell Bates", title: "HR", img: "https://cdn.balkan.app/shared/12.jpg" },
+        { id: 8, stpid: "hrs", name: "Asher Watts", title: "Junior HR", img: "https://cdn.balkan.app/shared/13.jpg" },
       ]);
-
-      // console.log(chart);
     }
   }
 }
