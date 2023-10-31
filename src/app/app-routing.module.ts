@@ -4,8 +4,13 @@ import { BasicComponent } from './components/basic/basic.component';
 import { GroupComponent } from './components/group/group.component';
 
 const routes: Routes = [
-  { path: '', component: BasicComponent },
-  { path: 'group', component: GroupComponent }
+  { path: 'basic', component: BasicComponent },
+  { path: 'group', component: GroupComponent },
+  {
+    path: '',
+    redirectTo: 'basic',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

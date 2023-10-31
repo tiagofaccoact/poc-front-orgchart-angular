@@ -32,16 +32,6 @@ export class BasicComponent implements OnInit {
           add: { text: "Add" },
           remove: { text: "Remove" }
         },
-        tags: {
-          "group": {
-            template: "group"
-          },
-          "hrs-group": {
-            subTreeConfig: {
-              columns: 2
-            }
-          }
-        }
       });
 
       chart.load([
@@ -51,12 +41,7 @@ export class BasicComponent implements OnInit {
         { id: 4, pid: 2, name: "Elliot Patel", title: "Sales", img: "https://cdn.balkan.app/shared/5.jpg" },
         { id: 5, pid: 2, name: "Lynn Hussain", title: "Sales", img: "https://cdn.balkan.app/shared/6.jpg" },
         { id: 6, pid: 3, name: "Tanner May", title: "Developer", img: "https://cdn.balkan.app/shared/7.jpg" },
-        { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://cdn.balkan.app/shared/8.jpg" },
-        { id: "hrs", pid: "1", name: "HR Team", tags: ["hrs-group", "group"], description: "Human Resource | London" },
-        { id: 8, stpid: "hrs", name: "Glenn Bell", title: "HR", img: "https://cdn.balkan.app/shared/10.jpg" },
-        { id: 9, stpid: "hrs", name: "Marcel Brooks", title: "HR", img: "https://cdn.balkan.app/shared/11.jpg" },
-        { id: 10, stpid: "hrs", name: "Maxwell Bates", title: "HR", img: "https://cdn.balkan.app/shared/12.jpg" },
-        { id: 11, stpid: "hrs", name: "Asher Watts", title: "Junior HR", img: "https://cdn.balkan.app/shared/13.jpg" },
+        { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://cdn.balkan.app/shared/8.jpg" }
       ]);
     }
   }

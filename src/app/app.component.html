@@ -6,9 +6,11 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<ul>
-  <li><a [routerLink]="['']">Basic</a></li>
-  <li><a [routerLink]="['group']">Group</a></li>
-</ul>
+<nav class="menu">
+  <ul>
+    <li><a [routerLink]="['basic']" routerLinkActive="active">Basic</a></li>
+    <li><a [routerLink]="['group']" routerLinkActive="active">Group</a></li>
+  </ul>
+</nav>
 
 <router-outlet></router-outlet>
