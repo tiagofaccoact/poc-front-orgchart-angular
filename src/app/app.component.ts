@@ -9,6 +9,8 @@ import OrgChart from "@balkangraph/orgchart.js";
 export class AppComponent implements OnInit {
   title = 'poc-front-orgchart-angular';
 
+  constructor() {}
+
   ngOnInit(): void {
     const tree = document.getElementById('tree');
     if (tree) {

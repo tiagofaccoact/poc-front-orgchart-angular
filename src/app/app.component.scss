@@ -1,3 +1,17 @@
 :host ::ng-deep [data-n-id='1'] rect {
     fill: #750000;
 }
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Helvetica;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
