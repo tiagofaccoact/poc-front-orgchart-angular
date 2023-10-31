@@ -2,16 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import OrgChart from "@balkangraph/orgchart.js";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-basic',
+  templateUrl: './basic.component.html',
+  styleUrls: ['./basic.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'poc-front-orgchart-angular';
+export class BasicComponent implements OnInit {
 
-  constructor() {
-    // OrgChart.templates['olivia']['field_0'] = '<text class="field_0" style="font-size: 20px;" fill="#ffffff" x="125" y="30" text-anchor="middle">{val}</text>';
-  }
+  constructor() { }
 
   ngOnInit(): void {
     const tree = document.getElementById('tree') as HTMLDivElement | null;

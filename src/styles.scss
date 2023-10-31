@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+:host ::ng-deep [data-n-id='1'] rect {
+    fill: #750000;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Helvetica;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
