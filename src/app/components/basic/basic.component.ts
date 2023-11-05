@@ -16,7 +16,7 @@ export class BasicComponent implements OnInit {
     if (tree) {
       OrgChart.SEARCH_PLACEHOLDER = "Buscar pessoa ou cargo"
       var chart = new OrgChart(tree, {
-        mouseScrool: OrgChart.none,
+        // mouseScrool: OrgChart.none,
         enableSearch: true,
         template: "olivia",
         enableDragDrop: true,

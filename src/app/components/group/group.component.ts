@@ -18,7 +18,8 @@ export class GroupComponent implements OnInit {
     if (tree) {
       OrgChart.SEARCH_PLACEHOLDER = "Buscar pessoa ou cargo"
       var chart = new OrgChart(tree, {
-        mouseScrool: OrgChart.none,
+        // mouseScrool: OrgChart.none,
+        // nodeMouseClick: OrgChart.action.expandCollapse,
         enableSearch: true,
         template: "olivia",
         enableDragDrop: true,
@@ -27,6 +28,9 @@ export class GroupComponent implements OnInit {
           field_0: "name",
           field_1: "title",
           img_0: "img",
+        },
+        collapse: {
+          level: 2
         },
         nodeMenu: {
           details: { text: "Details" },
@@ -40,10 +44,19 @@ export class GroupComponent implements OnInit {
           },
           "hrs-group": {
             subTreeConfig: {
-              columns: 2
+              columns: 1
+            }
+          },
+          "dev-group": {
+            subTreeConfig: {
+              columns: 1
             }
           }
         }
+      });
+
+      chart.on('drop', (sender) => {
+        console.log(sender);
       });
 
       chart.load([
@@ -52,12 +65,13 @@ export class GroupComponent implements OnInit {
         { id: 3, pid: 1, name: "Caden Ellison", title: "Dev Manager", img: "https://cdn.balkan.app/shared/4.jpg" },
         { id: 4, pid: 2, name: "Elliot Patel", title: "Sales", img: "https://cdn.balkan.app/shared/5.jpg" },
         { id: 5, pid: 2, name: "Lynn Hussain", title: "Sales", img: "https://cdn.balkan.app/shared/6.jpg" },
-        { id: 6, pid: 3, name: "Tanner May", title: "Developer", img: "https://cdn.balkan.app/shared/7.jpg" },
-        { id: 7, pid: 3, name: "Fran Parsons", title: "Developer", img: "https://cdn.balkan.app/shared/8.jpg" },
-        { id: "hrs", pid: "1", name: "HR Team", tags: ["hrs-group", "group"], description: "Human Resource | London" },
-        { id: 8, stpid: "hrs", name: "Glenn Bell", title: "HR", img: "https://cdn.balkan.app/shared/10.jpg" },
-        { id: 9, stpid: "hrs", name: "Marcel Brooks", title: "HR", img: "https://cdn.balkan.app/shared/11.jpg" },
-        { id: 10, stpid: "hrs", name: "Maxwell Bates", title: "HR", img: "https://cdn.balkan.app/shared/12.jpg" },
+        { id: "dev", pid: "3", name: "Dev Team", tags: ["dev-group", "group"], description: "Dev Team" },
+        { id: 6, stpid: "dev", name: "Tanner May", title: "Developer", img: "https://cdn.balkan.app/shared/7.jpg" },
+        { id: 7, stpid: "dev", name: "Fran Parsons", title: "Developer", img: "https://cdn.balkan.app/shared/8.jpg" },
+        { id: 8, pid: 1, name: "Glenn Bell", title: "RH Manager", img: "https://cdn.balkan.app/shared/10.jpg" },
+        { id: "hrs", pid: 8, name: "Recursos Humanos", tags: ["hrs-group", "group"], description: "Recursos Humanos" },
+        { id: 9, stpid: "hrs", name: "Marcel Brooks", title: "RH", img: "https://cdn.balkan.app/shared/11.jpg" },
+        { id: 10, stpid: "hrs", name: "Maxwell Bates", title: "RH", img: "https://cdn.balkan.app/shared/12.jpg" },
         { id: 11, stpid: "hrs", name: "Asher Watts", title: "Junior HR", img: "https://cdn.balkan.app/shared/13.jpg" },
       ]);
     }
