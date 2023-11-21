@@ -6,7 +6,7 @@ import OrgChart from "@balkangraph/orgchart.js";
   templateUrl: './group.component.html',
   styleUrls: ['./group.component.scss']
 })
-export class OrganogramaComponent implements OnInit {
+export class GroupComponent implements OnInit {
 
   zoomInIcon = '<svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">'
     + '<path d="M9.38302 16.6337C13.5802 16.6337 16.9827 13.2312 16.9827 9.03399C16.9827 4.8368 13.5802 1.4343 9.38302 1.4343C5.18583 1.4343 1.78333 4.8368 1.78333 9.03399C1.78333 13.2312 5.18583 16.6337 9.38302 16.6337Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
