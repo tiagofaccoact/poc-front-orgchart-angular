@@ -138,19 +138,19 @@ export class GroupComponent implements OnInit {
       });
 
       chart.load([
-        { id: 1, name: "Denny Curtis", title: "CEO", img: "https://cdn.balkan.app/shared/2.jpg" },
-        { id: 2, pid: 1, name: "Ashley Barnett", title: "Sales Manager", img: "https://cdn.balkan.app/shared/3.jpg" },
-        { id: 3, pid: 1, name: "Caden Ellison", title: "Dev Manager", img: "https://cdn.balkan.app/shared/4.jpg" },
-        { id: 4, pid: 2, name: "Elliot Patel", title: "Sales", img: "https://cdn.balkan.app/shared/5.jpg" },
-        { id: 5, pid: 2, name: "Lynn Hussain", title: "Sales", img: "https://cdn.balkan.app/shared/6.jpg" },
+        { id: 1, name: "Denny Curtis", title: "CEO", img: "../../../assets/images/2.jpg" },
+        { id: 2, pid: 1, name: "Ashley Barnett", title: "Sales Manager", img: "../../../assets/images/3.jpg" },
+        { id: 3, pid: 1, name: "Caden Ellison", title: "Dev Manager", img: "../../../assets/images/4.jpg" },
+        { id: 4, pid: 2, name: "Elliot Patel", title: "Sales", img: "../../../assets/images/5.jpg" },
+        { id: 5, pid: 2, name: "Lynn Hussain", title: "Sales", img: "../../../assets/images/6.jpg" },
         { id: "dev", pid: "3", name: "Dev Team", tags: ["dev-group", "group"], description: "Dev Team" },
-        { id: 6, stpid: "dev", name: "Tanner May", title: "Developer", img: "https://cdn.balkan.app/shared/7.jpg" },
-        { id: 7, stpid: "dev", name: "Fran Parsons", title: "Developer", img: "https://cdn.balkan.app/shared/8.jpg" },
-        { id: 8, pid: 1, name: "Glenn Bell", title: "RH Manager", img: "https://cdn.balkan.app/shared/10.jpg" },
+        { id: 6, stpid: "dev", name: "Tanner May", title: "Developer", img: "../../../assets/images/7.jpg" },
+        { id: 7, stpid: "dev", name: "Fran Parsons", title: "Developer", img: "../../../assets/images/8.jpg" },
+        { id: 8, pid: 1, name: "Glenn Bell", title: "RH Manager", img: "../../../assets/images/10.jpg" },
         { id: "hrs", pid: 8, name: "Recursos Humanos", tags: ["hrs-group", "group"], description: "Recursos Humanos" },
-        { id: 9, stpid: "hrs", name: "Marcel Brooks", title: "RH", img: "https://cdn.balkan.app/shared/11.jpg" },
-        { id: 10, stpid: "hrs", name: "Maxwell Bates", title: "RH", img: "https://cdn.balkan.app/shared/12.jpg" },
-        { id: 11, stpid: "hrs", name: "Asher Watts", title: "Junior HR", img: "https://cdn.balkan.app/shared/13.jpg" },
+        { id: 9, stpid: "hrs", name: "Marcel Brooks", title: "RH", img: "../../../assets/images/11.jpg" },
+        { id: 10, stpid: "hrs", name: "Maxwell Bates", title: "RH", img: "../../../assets/images/12.jpg" },
+        { id: 11, stpid: "hrs", name: "Asher Watts", title: "Junior HR", img: "../../../assets/images/13.jpg" },
       ]);
     }
   }
